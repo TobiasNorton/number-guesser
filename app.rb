@@ -26,12 +26,13 @@ def play_game
       guess = (lower + upper) / 2
     elsif user_response != "up" && user_response != "down" &&              user_response != "y"
       puts "Oops! Please enter 'up' or 'down'."
+      # user_response = gets.chomp.downcase  <===== why doesn't this work?
     end
   end
 
   if user_response == "y"
     tries += 1
-    puts "I told you I could do it, but you didn't believe me. Your number  is #{guess}, and it only took #{tries} tries. Play again? Type 'y' for   yes or 'n' for no."
+    puts "I told you I could do it! Your number  is #{guess}, and it only took #{tries} tries. Play again? Type 'y' for   yes or 'n' for no."
     
     user_response = gets.chomp.downcase
 
