@@ -24,6 +24,8 @@ def play_game
       tries +=1
       upper = guess - 1
       guess = (lower + upper) / 2
+    elsif user_response != "up" && user_response != "down" &&              user_response != "y"
+      puts "Oops! Please enter 'up' or 'down'."
     end
   end
 
